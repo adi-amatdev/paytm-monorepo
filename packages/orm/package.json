@@ -17,5 +17,8 @@
     "@types/node": "^26.0.0",
     "prisma": "^6.7.0",
     "typescript": "^6.0.3"
-  }
+  },
+  "exports": {
+        "./client": "./index.ts"
+    }
 }

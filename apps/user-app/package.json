@@ -15,7 +15,8 @@
     "geist": "^1.7.1",
     "next": "16.2.0",
     "react": "^19.2.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "@repo/orm":"workspace:*"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^16.2.0",

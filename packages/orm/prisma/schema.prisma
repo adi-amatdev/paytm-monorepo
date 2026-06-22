@@ -5,7 +5,7 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js" //js added here for import fix
   output   = "../src/generated/prisma"
 }
 
@@ -19,4 +19,9 @@ model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
+}
+
+model Purchase{
+  id Int @id @default(autoincrement())
+  item String 
 }

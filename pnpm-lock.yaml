@@ -20,6 +20,9 @@ importers:
 
   apps/user-app:
     dependencies:
+      '@repo/orm':
+        specifier: workspace:*
+        version: link:../../packages/orm
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui

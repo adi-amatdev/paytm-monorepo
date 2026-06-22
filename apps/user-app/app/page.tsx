@@ -1,13 +1,16 @@
-import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { Gradient } from "@repo/ui/gradient";
-import { TurborepoLogo } from "@repo/ui/turborepo-logo";
+import { prisma } from "@repo/orm/client"
 
+export default async function Page() {
+  const users = await prisma.user.findMany()
 
-export default function Page() {
   return (
-    <div className="bg-amber-600">
-        hello world whats up
+    <div className="bg-amber-600 text-black">
+      <h1>Users</h1>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.email} - {user.name ?? "no name"}</li>
+        ))}
+      </ul>
     </div>
   );
 }
